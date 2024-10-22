@@ -261,7 +261,7 @@ input[type="text"][name="name"]:focus {
       <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzuk4VEcxGo_wxf3sBWHoYGlo15Hw9wDJNkUAZLD6ZMblML0TJPt2yE-PI77Xi7qV8/exec'
         const form = document.forms['submit-to-google-sheet']
-        const wasi = document.getElementById('wasi');
+        const tohid = document.getElementById('tohid');
         //------------------------------------------------------
        // const submitBtn = document.getElementById('submit-btn');
         //--------------------------------------------------------
@@ -283,9 +283,9 @@ input[type="text"][name="name"]:focus {
           this.value='submitting';
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
-                wasi.innerHTML="YOUR NUMBER HAS BEEN SUBMETTIED JOIN GROUP AND WAIT FOR VCF";
+                tohid.innerHTML="YOUR NUMBER HAS BEEN SUBMETTIED JOIN GROUP AND WAIT FOR VCF";
                 setTimeout(function(){
-                    wasi.innerHTML="";
+                    tohid.innerHTML="";
 
 
 
@@ -321,9 +321,9 @@ closeButton.addEventListener("click", function() {
 
   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
     .then(response => {
-      wasi.innerHTML = "YOUR NUMBER HAS BEEN SUBMETTIED JOIN GROUP AND WAIT FOR VCF";
+      tohid.innerHTML = "YOUR NUMBER HAS BEEN SUBMETTIED JOIN GROUP AND WAIT FOR VCF";
       setTimeout(function() {
-        wasi.innerHTML = "";
+        tohid.innerHTML = "";
       }, 5000);
       form.reset();
       submitBtn.disabled = false;
